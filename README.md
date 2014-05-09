@@ -19,10 +19,9 @@ I added in the grunt task to both the GruntFile.js and package.json. I'm not act
 The atom-shell package ends up in your "binaries" folder. From there you can run the executable file and pass in the whole "default_app" folder as a parameter.
 At that point, I figured, why not add a "grunt-shell" task to start the built app, right from the default grunt task.
 
-When running it in this way, all console output goes right to my terminal like a normal Node.js app, which helped with some filepath trouble I was having.
-
+When running it in this way, all console output goes right to my terminal like a normal Node.js app, which helped with some filepath troubleshooting.
 Like I said, the app is pretty simple. You press a button to start a task, then press it again to end it. You can add a description to the task as well.
-When done for the day, click export, and we it uses the Node.js fs import to write an HTML file with your tasks.
+When done for the day, click export, and it uses the Node.js fs import to write an HTML file with your tasks, times, and durations.
 
 Not bad for a few hours. Way to go GitHub. If you find any flaws, it may because I'm on Windows and you're on Mac. Or because of my few glasses of wine tonight.
 
