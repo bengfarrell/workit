@@ -22,9 +22,22 @@ module.exports = function (grunt) {
     yeoman: {
       // configurable paths
       app: require('./bower.json').appPath || 'app',
-      dist: 'dist'
+      dist: 'default_app'
     },
 
+    'download-atom-shell': {
+      version: '0.12.3',
+      outputDir: 'binaries'
+    },
+
+    shell: {
+      'atom-shell': {
+          options: {
+              stderr: true
+          },
+          command: 'binaries\\atom.exe default_app'
+      }
+    },
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -272,6 +285,8 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
+            'package.json',
+            'main.js',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
             'fonts/*'
@@ -388,8 +403,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'newer:jshint',
-    'test',
-    'build'
+    'build',
+    'shell:atom-shell'
   ]);
 };

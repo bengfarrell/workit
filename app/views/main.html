@@ -1,6 +1,6 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
-    <li><a ng-href="#">export</a></li>
+    <li><a ng-href="#" ng-click="exportTimes()">export</a></li>
   </ul>
   <h3 class="text-muted">workit</h3>
 </div>
@@ -13,13 +13,13 @@
     <p>
         <textarea ng-model="$parent.description"></textarea>
     </p>
-    <p><a class="btn btn-lg {{recording ? 'btn-danger': 'btn-success'}}" ng-click="timerToggle()">Start Workin It</a></p>
+    <p><a class="btn btn-lg {{recording ? 'btn-danger': 'btn-success'}}" ng-click="timerToggle()">{{recording ? 'Stop Workin It': 'Start Workin It'}}</a></p>
 </div>
 
 <div class="row marketing">
     <ul>
         <li ng-repeat="time in times">
-            <strong>{{time.start.toLocaleTimeString()}} - {{time.end.toLocaleTimeString()}}</strong> {{time.description}}
+            <strong>{{time.start.toLocaleTimeString()}} - {{time.end.toLocaleTimeString()}}</strong> {{time.description}} ({{time.duration}} hours)
         </li>
     </ul>
 </div>
