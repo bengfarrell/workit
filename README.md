@@ -25,3 +25,5 @@ Like I said, the app is pretty simple. You press a button to start a task, then 
 When done for the day, click export, and we it uses the Node.js fs import to write an HTML file with your tasks.
 
 Not bad for a few hours. Way to go GitHub. If you find any flaws, it may because I'm on Windows and you're on Mac. Or because of my few glasses of wine tonight.
+
+Make sure you do the normal npm install stuff, and you should be fine to go!
