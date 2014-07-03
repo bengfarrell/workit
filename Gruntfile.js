@@ -26,17 +26,29 @@ module.exports = function (grunt) {
     },
 
     'download-atom-shell': {
-      version: '0.12.3',
+      version: '0.13.3',
       outputDir: 'binaries'
     },
 
     shell: {
-      'atom-shell': {
+        'atom-shell-win': {
           options: {
               stderr: true
           },
           command: 'binaries\\atom.exe default_app'
-      }
+        },
+        'atom-shell': {
+            options: {
+                stderr: true
+            },
+            command: 'binaries/atom default_app'
+        },
+        'devatom': {
+            options: {
+                stderr: true
+            },
+            command: 'binaries/atom app'
+        }
     },
     // Watches files for changes and runs tasks based on the changed files
     watch: {

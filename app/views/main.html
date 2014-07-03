@@ -1,7 +1,7 @@
 <div class="header">
-  <ul class="nav nav-pills pull-right">
+  <!--<ul class="nav nav-pills pull-right">
     <li><a ng-href="#" ng-click="exportTimes()">export</a></li>
-  </ul>
+  </ul>-->
   <h3 class="text-muted">workit</h3>
 </div>
 
@@ -11,7 +11,7 @@
         <currenttime></currenttime>
     </p>
     <p>
-        <textarea ng-model="$parent.description"></textarea>
+        <input ng-model="$parent.description" type="text" typeahead="project for project in projects | filter:$viewValue | limitTo:8" />
     </p>
     <p><a class="btn btn-lg {{recording ? 'btn-danger': 'btn-success'}}" ng-click="timerToggle()">{{recording ? 'Stop Workin It': 'Start Workin It'}}</a></p>
 </div>

@@ -3,5 +3,6 @@ dist
 .tmp
 .sass-cache
 binaries
-worksessions
+localstore
+reports
 app/bower_components

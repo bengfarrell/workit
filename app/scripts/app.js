@@ -1,4 +1,4 @@
 'use strict';
 
 angular
-  .module('workitApp', []);
+  .module('workitApp', ['ui.bootstrap']);
