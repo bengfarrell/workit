@@ -24,6 +24,8 @@ angular.module('workitApp')
          * toggle timer
          */
         $scope.timerToggle = function() {
+            console.log($scope.description);
+            if ($scope.description == undefined ) { $scope.description = "untitled project"; }
             $scope.recording = !$scope.recording;
             if ($scope.recording == true) {
                 $scope.times.push( { start: new Date(), description: $scope.description } );
