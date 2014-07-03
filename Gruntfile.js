@@ -299,6 +299,7 @@ module.exports = function (grunt) {
             '*.html',
             'package.json',
             'main.js',
+            'scripts/ui-bootstrap-tpls.min.js',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
             'fonts/*'
