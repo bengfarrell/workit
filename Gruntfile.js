@@ -304,6 +304,13 @@ module.exports = function (grunt) {
             'images/{,*/}*.{webp}',
             'fonts/*'
           ]
+        },{
+            expand: true,
+            dot: true,
+            dest: '<%= yeoman.dist %>',
+            src: [
+                'node_modules/sanitize-filename/index.js'
+            ]
         }, {
           expand: true,
           cwd: '.tmp/images',
@@ -417,6 +424,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'build',
-    'shell:atom-shell'
+    'shell:atom-shell-win'
   ]);
 };

@@ -9,6 +9,10 @@ angular.module('workitApp')
 
         // typeahead for project name
         $scope.projects = [];
+
+        if (!fs.existsSync('localstore')) {
+            fs.mkdirSync('localstore');
+        }
         var projects = fs.readdirSync('localstore');
         for (var c in projects) {
             $scope.projects.push(projects[c].split('.')[0]);
